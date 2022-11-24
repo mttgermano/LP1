@@ -1,8 +1,13 @@
-######UFCG FUNC FACILIDADES PYTHON
-######Matheus Germano
-###feito em: 31/08/22
-###útlima verificação de código: 03/09/22   
-###notas da verificação: map, tryp/except não existe. Todas funções funcionam e foram checadas.
+###### UFCG FUNC FACILIDADES PYTHON
+###### Matheus Germano
+### feito em: 31/08/22
+#
+### útlima verificação de código: 24/11/22   
+#
+### notas da verificação: 
+# Função f_in foi concertada; Função f_sort  e f_sorted foram atualizadas (menos linhas). 
+# Outras funções de sort foram adicionadas: Bubble sort e selection sort. 
+# Todas funções funcionam e foram checadas.
 
 ###v2  = outra versão do código
 ###NOT = Not Original
@@ -45,12 +50,14 @@ def f_replace(existente,requisitado,frase):     #nao pode ser uma lista
 
 
 #count
-def f_count(element1,element2):
+def f_count(elemento_buscado,referencia):
     contador = 0
-    for i in element2:
-        if element1 == i:
+    for i in referencia:
+        if elemento_buscado == i:
             contador += 1
     return contador
+
+print(f_count('o', 'ooo'))
 
 
 #index
@@ -67,45 +74,59 @@ def f_index(element1,element2):
                 #minima ideia como fazer isso na mao, acho que nao tem como 
 
 
-#sort
+#quicksort   #NTO
 def f_sort(lista):       
-    menores = []
-    iguais = []
-    maiores = []
-
-    if len(lista) > 1:
-    #pivot
-        pivot = lista[0]
-    #separa os casos
-        for i in lista:
-            if i < pivot:
-                menores.append(i)
-            elif i == pivot:
-                iguais.append(i)
-            elif i > pivot:
-                maiores.append(i)
-    #recursao
-        return f_sort(menores)+iguais+f_sort(maiores)  
-    #base
-    else: 
+    # base
+    if len(lista) < 2:
         return lista
 
+    # recursão
+    else:
+        pivot = lista[0]
+        menores = [i for i in lista[1:] if i <= pivot]
+        maiores = [i for i in lista[1:] if i > pivot]
+        return f_sort(menores) + [pivot] + f_sort(maiores)
+
+
+#bubble sort
+def f_bubble(lista):  
+    for i in range(1,len(lista)):
+        for i in range(1,len(lista)):
+            if lista[i] < lista[i-1]:
+                #swap
+                lista[i],lista[i-1] = lista[i-1],lista[i]
+    return lista
+
+
+#selection sort
+def f_selection(lista):  
+    indice_troca = 0
+    while indice_troca != len(lista):
+        # acha o menor
+        menor = indice_troca
+        for i in range(1+indice_troca,len(lista)):
+            if lista[i] < lista[menor]:
+                menor = i
+
+        # swap
+        lista[indice_troca],lista[menor] = lista[menor],lista[indice_troca]
+        indice_troca +=1
+    return lista
+
+
+#mergesort
 
 #sorted
 def f_sorted(lista):
     anterior = lista[0]
-    check = False
+    check = True
     for i in range(len(lista)):
-        if i == 0:
-            pass
-        else:
+        if i != 0:
             anterior = lista[i-1]
 
         if lista[i] < anterior:
             check = False
             break
-        else:
-            check = True
     return check
 
 
@@ -117,12 +138,12 @@ def f_extend(list1,list2):
 
 
 #in
-def f_in(element1,element2):        #element2 pode ser tanto str quanto lista
-    for i in element2:       
+def f_in(element1,sequence):        #sequence pode ser tanto str quanto lista
+    for i in sequence:       
         if i == element1:         
             return True
-        else:
-            return False
+        
+    return False
 
 
 #min
@@ -198,6 +219,7 @@ def f_reverse(lista):    #assumindo que esse elemento é uma lista, pois str nã
         lista[i] = lista[len(lista) - 1 - i]
         lista[len(lista) - 1 - i] = aux
     return lista
+
 
 #v2 NTO             #artifícios do range
 #listafinal = []
