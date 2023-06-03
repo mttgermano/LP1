@@ -13,11 +13,10 @@ shopt -s checkwinsize
 
 #Short name
 export PS1="\[\e[34m\]matheus.germano\[\e[36m\]@\h\[\e[00m\] in \[\e[35m\]\w\[\e[00m\] \n\[\e[32m\][🦕]-→ \[\e[37m\]    "
-
 export EDITOR="vim"
 
 #####Sets
-#set -o vi
+set -o vi
 
 #####Scripts
 
