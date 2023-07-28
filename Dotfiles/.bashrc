@@ -5,6 +5,7 @@ alias aa="cd ~/Faculdade/'Algoritmos Avançados'"
 alias pip="python3.10 -m pip"
 alias ls="ls --color=always --group-directories-first"
 alias rm="rm -i"
+alias src="/home/matheus.medeiros.germano/.bashrc"
 shopt -s checkwinsize
 
 # Variables #############################################################################################################
@@ -26,6 +27,7 @@ bind -m vi-insert   'Control-l: clear-screen'
 #[[ $- != *i* ]] && return
 
 # Binds ################################################################################################################
+export PATH="/home/matheus.medeiros.germano/scripts/bin:$PATH"
 
 # Curl this file! ######################################################################################################
 # curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/Dotfiles/.bashrc
