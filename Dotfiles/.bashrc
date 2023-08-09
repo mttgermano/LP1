@@ -1,11 +1,13 @@
 # Alias ##################################################################################################################
+USERP=/home/matheus.medeiros.germano/
+
 alias py=python3
 alias lab="cd ~/Faculdade/LabProg/p1/ex/q1"
 alias aa="cd ~/Faculdade/'Algoritmos Avançados'"
 alias pip="python3.10 -m pip"
 alias ls="ls --color=always --group-directories-first"
 alias rm="rm -i"
-alias src="/home/matheus.medeiros.germano/.bashrc"
+alias src="source $USERP/.bashrc"
 shopt -s checkwinsize
 
 # Variables #############################################################################################################
