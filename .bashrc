@@ -32,4 +32,4 @@ bind -m vi-insert   'Control-l: clear-screen'
 export PATH="/home/matheus.medeiros.germano/scripts/bin:$PATH"
 
 # Curl this file! ######################################################################################################
-# curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/Dotfiles/.bashrc
+# curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/.bashrc
