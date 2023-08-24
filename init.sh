@@ -23,5 +23,6 @@ chmod u+x ~/scripts/bin/lvim
 #### Curl this file!
 '
 curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/init.sh ~/scripts/bin/init.sh
-chmod u+x ~/scripts/init.sh
+chmod u+x ~/scripts/bin/init.sh
+bash ~/scripts/bin/init.sh
 '
