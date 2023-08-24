@@ -19,3 +19,9 @@ curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/.vimrc
 #### Nvim 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage ~/scripts/bin/lvim
 chmod u+x ~/scripts/bin/lvim
+
+#### Curl this file!
+'
+curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/init.sh ~/scripts/bin/init.sh
+chmod u+x ~/scripts/init.sh
+'
