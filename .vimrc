@@ -4,6 +4,7 @@ set ignorecase
 set hlsearch
 set title
 set incsearch
+set autoindent
 set noerrorbells
 
 "Syntax
