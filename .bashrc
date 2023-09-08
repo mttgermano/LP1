@@ -1,5 +1,5 @@
 # Alias ##################################################################################################################
-USERP=/home/matheus.medeiros.germano/
+USERP=/home/matheus.medeiros.germano
 
 alias py="python3"
 alias pip="python3.10 -m pip"
@@ -27,7 +27,7 @@ bind -m vi-insert   'Control-l: clear-screen'
 #[[ $- != *i* ]] && return
 
 # Binds ################################################################################################################
-export PATH="/home/matheus.medeiros.germano/scripts/bin:$PATH"
+export PATH="/home/matheus.medeiros.germano/scripts:$PATH"
 
 # Curl this file! ######################################################################################################
 # curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/.bashrc
