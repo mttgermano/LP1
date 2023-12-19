@@ -27,7 +27,12 @@ bind -m vi-insert   'Control-l: clear-screen'
 #[[ $- != *i* ]] && return
 
 # Binds ################################################################################################################
-export PATH="/home/matheus.medeiros.germano/scripts:$PATH"
+pathadd() {
+    if [ -d "$1" ] && [[ ! $PATH =~ (^|:)$1(:|$) ]]; then
+        PATH+=:$1
+    fi
+}
+pathadd $USERP/scripts
 
 # Curl this file! ######################################################################################################
 # curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/.bashrc
