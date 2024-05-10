@@ -6,6 +6,7 @@ set title
 set incsearch
 set autoindent
 set noerrorbells
+inoremap <C-x> <C-n>
 
 "Syntax
 syntax on
