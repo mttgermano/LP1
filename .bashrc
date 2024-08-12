@@ -1,5 +1,5 @@
 # Alias ##################################################################################################################
-USERP=/home/matheus.medeiros.germano
+USERP=/home/matheus.germano
 
 alias py="python3"
 alias pip="python3.10 -m pip"
