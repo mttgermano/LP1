@@ -1,5 +1,4 @@
 # Alias ----------------------------------------------------------------------------------------------------------------
-
 alias py="python3"
 alias pip="python3.10 -m pip"
 alias ls="ls --color=always --group-directories-first"
@@ -33,5 +32,5 @@ pathadd() {
 }
 pathadd /home/$(whoami)/scripts
 
-# Curl this file! ######################################################################################################
+# Curl this file! ---------------------------------------------------------------------------------------------------------
 # curl -LJO https://raw.githubusercontent.com/mttgermano/LP1/main/.bashrc
